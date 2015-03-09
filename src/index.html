@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/bower/jquery.remodal.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div id="friends"></div>
+
+<nav class="nav">
+<button id="logout" class="nav_button">Logout</button>
+</nav>
+
+<div class="remodal" data-remodal-id="loginModal" data-remodal-options="closeOnConfirm: false, closeOnEscape: false, closeOnAnyClick: false">
+    <h1 class="remodal-title">Acquaintance Manager</h1>
+    <p class="remodal-description">
+      This is Facebook friend list manager. <br />
+      Please link your facebook.
+    </p>
+    <br>
+    <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" scope="public_profile, email, user_likes, user_about_me, read_friendlists" onlogin="FBLoginManager.checkLoginState();"></div>
+</div>
+
+<script src="js/bower/jquery.min.js"></script>
+<script src="js/bower/jquery.remodal.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
