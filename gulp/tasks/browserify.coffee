@@ -18,6 +18,6 @@ gulp.task 'browserify', ->
     extensions: ['.coffee']
   )
   .bundle()
-  .pipe source('app.js')
+  .pipe source('bundle.js')
   .pipe(gulp.dest("#{paths.dest.coffee}"))
   .pipe browserSync.reload({stream:true});

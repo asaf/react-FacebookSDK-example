@@ -1,4 +1,4 @@
-FBLoginManager = require "./loginManager"
+FBLoginManager = require "./login"
 
 window.FBLoginManager = FBLoginManager
 
@@ -13,8 +13,7 @@ window.fbAsyncInit = ()->
   FB.getLoginStatus (response) ->
     FBLoginManager.statusChangeCallback response
 
-# Load the SDK asynchronously
-loadSDK = (d, s, id) ->
+loadFacebookSDK = (d, s, id) ->
   fjs = d.getElementsByTagName(s)[0]
   if d.getElementById(id)
     return
@@ -23,12 +22,4 @@ loadSDK = (d, s, id) ->
   js.src = "//connect.facebook.net/en_US/sdk.js"
   fjs.parentNode.insertBefore(js, fjs)
 
-loadSDK(document, 'script', 'facebook-jssdk')
-
-$.ready(
-  $('#logout').click(()->
-    FB.logout((response) ->
-      console.log 'Logout!'
-    )
-  )
-)
+loadFacebookSDK(document, 'script', 'facebook-jssdk')

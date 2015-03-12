@@ -8,7 +8,7 @@ path =
     sass   : srcDir + '/css/app.sass'
     html   : srcDir + '/*.html'
     img    : srcDir + '/img/*'
-    coffee : './' + srcDir + '/js/app.coffee'
+    coffee : './' + srcDir + '/js/main.coffee'
   dest:
     dir    : destDir
     sass   : destDir + '/css'

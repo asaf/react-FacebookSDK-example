@@ -25,6 +25,7 @@
     "react": "^0.12.2",
     "require-dir": "^0.1.0",
     "run-sequence": "^1.0.2",
-    "vinyl-source-stream": "^1.0.0"
+    "vinyl-source-stream": "^1.0.0",
+    "react-router": "^0.12.4"
   }
 }
