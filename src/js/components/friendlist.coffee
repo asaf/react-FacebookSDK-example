@@ -16,12 +16,13 @@ Friendlist = React.createClass(
 
   renderList: ->
     for d in @state.data
-      (<div className="fList_obj" key={d.id}>
-          <p className="fList_id">id: {d.id}</p>
-          <h3 className="fList_name">name: {d.name}</h3>
-          <p className="fList_type">type: {d.list_type}</p>
-        </div>
-      )
+        friendlistLink = "https://www.facebook.com/lists/" + d.id
+        (<div className="fList_obj" key={d.id}>
+            <p className="fList_id">id: {d.id}</p>
+            <h3 className="fList_name">name: <a href=friendlistLink target='new'>{d.name}</a></h3>
+            <p className="fList_type">type: {d.list_type}</p>
+          </div>
+        )
 
   render: ->
     if @state.data == ''
